@@ -17,7 +17,7 @@ export default class App extends React.Component {
     index: 0,
     routes: [
       { key: 'explore', title: 'Home', icon: 'home' },
-      { key: 'wishlist', title: 'Wishlist', icon: 'favorite-border' },
+      { key: 'wishlist', title: 'Wishlist', icon: 'star-border' },
       { key: 'chat', title: 'Chat', icon: 'question-answer' },
       { key: 'profil', title: 'Profil', icon: 'face' },
     ],
