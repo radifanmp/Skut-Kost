@@ -5,10 +5,11 @@ import { BottomNavigation, Provider, DefaultTheme, Colors} from 'react-native-pa
 
 
 //Screen
-import Chat from './src/screen/Chat';
-import Explore from './src/screen/Explore';
-import Profil from './src/screen/Profil';
-import Wishlist from './src/screen/Wishlist';
+import Chat from './src/screen/chat/Chat';
+import Explore from './src/screen/explore/Explore';
+import Profil from './src/screen/profil/Profil';
+import Wishlist from './src/screen/wishlist/Wishlist';
+import routes from './src/screen/routes';
 
 
 //Navigasi
@@ -16,10 +17,10 @@ export default class App extends React.Component {
   state = {
     index: 0,
     routes: [
-      { key: 'explore', title: 'Home', icon: 'home' },
-      { key: 'wishlist', title: 'Wishlist', icon: 'star-border' },
-      { key: 'chat', title: 'Chat', icon: 'question-answer' },
-      { key: 'profil', title: 'Profil', icon: 'face' },
+      { key: 'Explore', title: 'Home', icon: 'home' },
+      { key: 'Wishlist', title: 'Wishlist', icon: 'star-border' },
+      { key: 'Chat', title: 'Chat', icon: 'question-answer' },
+      { key: 'Profil', title: 'Profil', icon: 'face' },
     ],
   };
 
@@ -28,11 +29,13 @@ export default class App extends React.Component {
   _renderScene = BottomNavigation.SceneMap({
 
     //name key : name componen/class
-
-    explore: Explore,
-    chat: Chat,
-    profil: Profil,
-    wishlist: Wishlist,
+    
+    Login : routes,
+    Explore: Explore,
+    Chat: Chat,
+    Profil: Profil,
+    Wishlist: Wishlist,
+    
   });
 
   render() {

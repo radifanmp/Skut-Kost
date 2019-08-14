@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { View, FlatList, StyleSheet, ScrollView } from 'react-native';
 import { Text, Appbar,Button  } from 'react-native-paper';
 import Slideshow from 'react-native-slideshow';
+import Kota from './Kota';
 
 
 const city = [
@@ -57,11 +58,9 @@ componentWillUnmount(){
 
 render() {
     
-// let screenWidth = Dimensions.get('window').width;
-// let screenHeight = Dimensions.get('window').height;
     return (
 
-    <View>
+      <ScrollView style={{backgroundColor: '#FFFF'}}>
 
         <Appbar.Header style={styles.Aheader}>
         <Appbar.Content title={'Skut Kost'} style={styles.title}/>
@@ -73,6 +72,8 @@ render() {
         <View>
         <Button style={styles.Searchbar}  icon="search" mode="contained" onPress={() => console.log('Pressed')}> Search </Button>
         </View>
+
+        <View style={styles.line}></View>
 
         <View>
           <Text style={styles.tag}>Promo</Text>
@@ -86,22 +87,23 @@ render() {
           />
         </View>
 
+        
+
+        <View style={{flexDirection:'row', alignItems: 'space-between', height: 30, marginVertical: 30}}>
+          <View style={{flexDirection:'row', alignItems: 'space-between', position: 'absolute'}}>
+          <Text style={styles.tag}>Tertarik mengiklankan Kostmu ? </Text>
+          <Button style={styles.button} mode="contained" onPress={() => console.log('Pressed')}>
+          <Text style={{color: 'white'}}> Pasang Iklan </Text> </Button>
+          </View>
+        </View>
+
         <View>
           <Text style={styles.tag}>Popular Cities</Text>
-          <ScrollView horizontal={true} >
-            <FlatList
-            data={this.props.data}
-            extraData={this.state}
-            keyExtractor={this._keyExtractor}
-            renderItem={this._renderItem}
-            />
-            </ScrollView>
+            <Kota/>
         </View>
 
       </View>
-    </View>
-
-      
+      </ScrollView>
       
     )
   }
@@ -140,7 +142,22 @@ height: 40,
 marginTop: 10,
 backgroundColor: '#95a5a6',
 opacity: 0.3,
-}
+},
+
+line: {
+  backgroundColor: 'silver',
+  height: 10,
+  padding: 0,
+  marginTop: 20
+},
+
+button: {
+  borderRadius: 20,
+  width: 130,
+  marginTop: 10,
+  backgroundColor: '#e67e22',
+  marginHorizontal: 20,
+  },
 });
 
 export default Explore
