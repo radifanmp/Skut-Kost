@@ -56,6 +56,10 @@ componentWillUnmount(){
   clearInterval(this.state.interval);
 }
 
+static navigationOptions = {
+  header: null
+}
+
 render() {
     
     return (

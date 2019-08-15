@@ -6,18 +6,17 @@ import { BottomNavigation, Provider, DefaultTheme, Colors} from 'react-native-pa
 
 //Screen
 import Chat from './src/screen/chat/Chat';
-import Explore from './src/screen/explore/Explore';
 import Profil from './src/screen/profil/Profil';
 import Wishlist from './src/screen/wishlist/Wishlist';
-import routes from './src/screen/routes';
-
+import Index from './src/screen/routes';
+import Daftar from './src/screen/profil/Daftar'
 
 //Navigasi
 export default class App extends React.Component {
   state = {
     index: 0,
     routes: [
-      { key: 'Explore', title: 'Home', icon: 'home' },
+      { key: 'Daftar', title: 'Home', icon: 'home' },
       { key: 'Wishlist', title: 'Wishlist', icon: 'star-border' },
       { key: 'Chat', title: 'Chat', icon: 'question-answer' },
       { key: 'Profil', title: 'Profil', icon: 'face' },
@@ -30,8 +29,7 @@ export default class App extends React.Component {
 
     //name key : name componen/class
     
-    Login : routes,
-    Explore: Explore,
+    Daftar: Daftar,
     Chat: Chat,
     Profil: Profil,
     Wishlist: Wishlist,

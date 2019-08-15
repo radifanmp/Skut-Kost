@@ -2,12 +2,13 @@ import * as React from 'react';
 import { View, Image, StyleSheet, ScrollView } from 'react-native';
 import { Text, Appbar, Button, } from 'react-native-paper';
 
+
 class Profil extends React.Component{
 
 render() {
-  
+
     return (
-    <ScrollView>
+    <ScrollView style={{backgroundColor: '#FFFF'}}>
       <Appbar.Header style={styles.Aheader}>
           <Appbar.Content title={'Profil'}/>
       </Appbar.Header>
@@ -81,5 +82,7 @@ const styles = StyleSheet.create({
      },
 
 })
+
+
 
 export default Profil

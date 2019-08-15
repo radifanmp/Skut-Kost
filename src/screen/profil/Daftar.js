@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, StyleSheet, ScrollView, TextInput, } from 'react-native';
 import { Text,  Button, } from 'react-native-paper';
 
-class Login extends React.Component{
+class Daftar extends React.Component{
 
     render() {
   
@@ -13,9 +13,10 @@ class Login extends React.Component{
             <View style={styles.container}>
 
                 <View style={styles.loginitem}>
-                    <Text style={styles.title}>Login</Text>
-
-                    <Text style={{fontSize:15, textAlign: 'center', marginBottom: 20, color: '#FFF'}}>SkutKost Mudah Cepat Dan Tepat dimanapun kostnya carinya pasti di SkuKost</Text>
+                    <Text style={styles.title}>Daftar</Text>
+                    
+                    <TextInput placeholder="Nama" placeholderTextColor="rgba(255,255,255,0.9)" 
+                    style={styles.input} />
 
                     <TextInput placeholder="Email" placeholderTextColor="rgba(255,255,255,0.9)" 
                     style={styles.input} />
@@ -24,8 +25,11 @@ class Login extends React.Component{
                     secureTextEntry
                     style={styles.input} />
 
+                    <TextInput placeholder="No Telp" placeholderTextColor="rgba(255,255,255,0.9)"
+                    style={styles.input} />
+
                     <Button style={styles.button} mode="contained" onPress={() => console.log('Pressed')}>
-                        <Text style={styles.title2}>Login</Text>
+                        <Text style={styles.title2}>Daftar</Text>
                     </Button>
                 </View>
 
@@ -76,4 +80,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Login
+export default Daftar
