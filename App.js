@@ -9,16 +9,16 @@ import Chat from './src/screen/chat/Chat';
 import Profil from './src/screen/profil/Profil';
 import Wishlist from './src/screen/wishlist/Wishlist';
 import Index from './src/screen/routes';
-import Daftar from './src/screen/profil/Daftar'
+import listMenu from './src/screen/explore/listMenu'
 
 //Navigasi
 export default class App extends React.Component {
   state = {
     index: 0,
     routes: [
-      { key: 'Daftar', title: 'Home', icon: 'home' },
+      { key: 'Index', title: 'Home', icon: 'home' },
       { key: 'Wishlist', title: 'Wishlist', icon: 'star-border' },
-      { key: 'Chat', title: 'Chat', icon: 'question-answer' },
+      { key: 'listMenu', title: 'Chat', icon: 'question-answer' },
       { key: 'Profil', title: 'Profil', icon: 'face' },
     ],
   };
@@ -29,8 +29,8 @@ export default class App extends React.Component {
 
     //name key : name componen/class
     
-    Daftar: Daftar,
-    Chat: Chat,
+    Index: Index,
+    listMenu: listMenu,
     Profil: Profil,
     Wishlist: Wishlist,
     

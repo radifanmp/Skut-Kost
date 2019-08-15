@@ -11,19 +11,19 @@ const dataAtas =[
     },
     {
         nama:"Bandung",
-        gambar : "https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        gambar : "https://matalelaki.com/media/81/0d/e3/810de365faa92fcc76a6e5656cc170ce.jpg"
     },
     {
         nama:"Yogyakarta",
-        gambar : "https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        gambar : "https://s3-ap-southeast-1.amazonaws.com/traveloka/imageResource/2018/12/10/1544412660735-aeface5904e4948ee6468eaec91784a1.jpeg"
     },
     {
         nama:"Makasar",
-        gambar : "https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        gambar : "https://pbs.twimg.com/media/Dl_pEqeU4AAwcLk.jpg:large"
     },
     {
         nama:"Medan",
-        gambar : "https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        gambar : "http://3.bp.blogspot.com/-mUDiWwbr7kk/T_vSUCcdCRI/AAAAAAAAAE0/xZj5KpTzSaw/s1600/istana_maimun+safari+and+indotour.jpg"
     },
 ]
 export default class Kota extends Component{

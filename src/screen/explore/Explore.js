@@ -77,8 +77,6 @@ render() {
         <Button style={styles.Searchbar}  icon="search" mode="contained" onPress={() => console.log('Pressed')}> Search </Button>
         </View>
 
-        <View style={styles.line}></View>
-
         <View>
           <Text style={styles.tag}>Promo</Text>
           <Slideshow 

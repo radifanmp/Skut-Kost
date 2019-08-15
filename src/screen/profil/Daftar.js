@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, ScrollView, TextInput, } from 'react-native';
+import { View, StyleSheet, ScrollView, TextInput, Picker } from 'react-native';
 import { Text,  Button, } from 'react-native-paper';
 
 class Daftar extends React.Component{
@@ -17,7 +17,7 @@ class Daftar extends React.Component{
                     
                     <TextInput placeholder="Nama" placeholderTextColor="rgba(255,255,255,0.9)" 
                     style={styles.input} />
-
+                    
                     <TextInput placeholder="Email" placeholderTextColor="rgba(255,255,255,0.9)" 
                     style={styles.input} />
 
