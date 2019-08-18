@@ -1,17 +1,29 @@
 import * as React from 'react';
 import { View, StyleSheet, ScrollView, TextInput, Image } from 'react-native';
 import { Text,  Button, } from 'react-native-paper';
-import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
+import { Dropdown } from 'react-native-material-dropdown';
 
 class IklanForm extends React.Component{
 
     render() {
 
-        var jenis_kost = [
-            {label: 'Campur', value: 0 },
-            {label: 'Laki-laki', value: 1 },
-            {label: 'Perempuan', value: 2 }
-          ];
+        let kategori_kost = [{
+            value: 'Laki - laki',
+          }, {
+            value: 'Perempuan',
+          }, {
+            value: 'Campur',
+          }];
+
+          let jenis_kost = [{
+            value: 'Hotel',
+          }, {
+            value: 'Apartement',
+          }, {
+            value: 'Losment',
+          }, {
+            value: 'Kost Biasa Men',
+          },];
 
         return (
             
@@ -20,11 +32,24 @@ class IklanForm extends React.Component{
             <View>
 
                 <View>
+
+                    <Dropdown
+                    label='Jenis Kost'
+                    data={jenis_kost}
+                    />
     
                     <TextInput placeholder="Nama Kost" placeholderTextColor="black" 
                     style={styles.input} />
 
                     <TextInput placeholder="Alamat Kost" placeholderTextColor="black"
+                    style={styles.input} />
+
+                    <Dropdown
+                    label='Kategori Kost'
+                    data={kategori_kost}
+                    />
+
+                    <TextInput placeholder="Luas Kost" placeholderTextColor="black"
                     style={styles.input} />
 
                     <Text>Search alamat/area kost anda di Peta, kemudian pindahkan pin di Peta ke lokasi tepat kost anda</Text>
@@ -57,15 +82,6 @@ class IklanForm extends React.Component{
                     <TextInput placeholder="Harga Bulanan" placeholderTextColor="black"
                     style={styles.input} />
 
-                    <RadioForm
-                    radio_props={jenis_kost}
-                    buttonColor={'#16a085'}
-                    formHorizontal={true}
-                    buttonSize={13}
-                    initial={0}
-                    onPress={(value) => {this.setState({value:value})}}
-                    />
-
                     <Button style={styles.button} mode="contained" onPress={() => console.log('Pressed')}>
                         <Text style={styles.title2}>Pasang Iklan</Text>
                     </Button>
@@ -87,7 +103,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#95a5a6',
         opacity: 0.3,
         marginBottom: 15,
-        color: '#FFFFFF',
+        marginTop: 15,
+        color: '#000000',
         borderRadius: 20,
         textAlign: 'left',
     },
@@ -95,6 +112,7 @@ const styles = StyleSheet.create({
     button: {
         borderRadius: 20,
         backgroundColor: '#e67e22',
+        marginTop: 15
     },
 
     title2: {
