@@ -10,7 +10,11 @@ import Profil from './src/screen/profil/Profil';
 import Wishlist from './src/screen/wishlist/Wishlist';
 import Index from './src/screen/routes';
 import PasangIklan from './src/screen/explore/PasangIklan'
-import Login from './src/screen/profil/Login'
+// import Login from './src/screen/profil/Login'
+import Daftar from './src/screen/profil/Daftar'
+// import Filter from './src/screen/explore/Filter'
+import ModalTester from './src/screen/explore/ModalTester'
+
 
 //Navigasi
 export default class App extends React.Component {
@@ -21,7 +25,7 @@ export default class App extends React.Component {
       { key: 'Wishlist', title: 'Wishlist', icon: 'star-border' },
       { key: 'PasangIklan', title: 'Chat', icon: 'question-answer' },
       { key: 'Profil', title: 'Profil', icon: 'face' },
-      { key: 'Profil', title: 'Demo', icon: 'face' },
+      { key: 'Daftar', title: 'Demo', icon: 'face' },
     ],
   };
 
@@ -35,6 +39,7 @@ export default class App extends React.Component {
     PasangIklan: PasangIklan,
     Profil: Profil,
     Wishlist: Wishlist,
+    Daftar: Daftar
     
   });
 

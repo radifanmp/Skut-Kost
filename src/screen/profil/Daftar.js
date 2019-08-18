@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, ScrollView, TextInput, Picker } from 'react-native';
+import { View, StyleSheet, ScrollView, TextInput, Image } from 'react-native';
 import { Text,  Button, } from 'react-native-paper';
 
 class Daftar extends React.Component{
@@ -12,8 +12,13 @@ class Daftar extends React.Component{
 
             <View style={styles.container}>
 
+            <View style={styles.logoContainer}><Image style={styles.logo}
+            source={require('../profil/icon.png')}/>
+
                 <View style={styles.loginitem}>
                     <Text style={styles.title}>Daftar</Text>
+
+                    <Text style={{fontSize:15, textAlign: 'center', marginBottom: 20, color: '#FFF'}}>Daftar Aja Dulu Kali Ada Yang Cocok</Text>
                     
                     <TextInput placeholder="Nama" placeholderTextColor="rgba(255,255,255,0.9)" 
                     style={styles.input} />
@@ -35,6 +40,7 @@ class Daftar extends React.Component{
 
             </View>
 
+                </View>
             </ScrollView>
         )
 
@@ -48,8 +54,9 @@ const styles = StyleSheet.create({
       flex: 1,
     },
 
-    loginitem: {
-      paddingTop: 100,
+    logoContainer: {
+      alignItems: 'center',
+      flexGrow: 1,
     },
 
     title: {
@@ -67,6 +74,11 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         borderRadius: 20,
         textAlign: 'center',
+        width: 330
+    },
+   
+    logo: {
+      justifyContent: 'center',
     },
 
     button: {

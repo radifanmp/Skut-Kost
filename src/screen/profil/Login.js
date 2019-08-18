@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, ScrollView, TextInput, } from 'react-native';
+import { View, StyleSheet, ScrollView, TextInput, Image} from 'react-native';
 import { Text,  Button, } from 'react-native-paper';
 
 class Login extends React.Component{
@@ -11,6 +11,9 @@ class Login extends React.Component{
             <ScrollView style={{backgroundColor: '#16a085'}}>
 
             <View style={styles.container}>
+
+            <View style={styles.logoContainer}><Image style={styles.logo}
+            source={require('../profil/icon.png')}/>
 
                 <View style={styles.loginitem}>
                     <Text style={styles.title}>Login</Text>
@@ -27,6 +30,8 @@ class Login extends React.Component{
                     <Button style={styles.button} mode="contained" onPress={() => console.log('Pressed')}>
                         <Text style={styles.title2}>Login</Text>
                     </Button>
+
+                    </View>
                 </View>
 
             </View>
@@ -44,8 +49,9 @@ const styles = StyleSheet.create({
       flex: 1,
     },
 
-    loginitem: {
-      paddingTop: 100,
+    logoContainer: {
+      alignItems: 'center',
+      flexGrow: 1,
     },
 
     title: {
@@ -63,6 +69,10 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         borderRadius: 20,
         textAlign: 'center',
+    },
+
+    logo: {
+      justifyContent: 'center',
     },
 
     button: {
