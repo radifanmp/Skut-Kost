@@ -9,7 +9,8 @@ import Chat from './src/screen/chat/Chat';
 import Profil from './src/screen/profil/Profil';
 import Wishlist from './src/screen/wishlist/Wishlist';
 import Index from './src/screen/routes';
-import detailProfil from './src/screen/profil/detailProfil'
+import PasangIklan from './src/screen/explore/PasangIklan'
+import Login from './src/screen/profil/Login'
 
 //Navigasi
 export default class App extends React.Component {
@@ -18,8 +19,9 @@ export default class App extends React.Component {
     routes: [
       { key: 'Index', title: 'Home', icon: 'home' },
       { key: 'Wishlist', title: 'Wishlist', icon: 'star-border' },
-      { key: 'detailProfil', title: 'Chat', icon: 'question-answer' },
+      { key: 'PasangIklan', title: 'Chat', icon: 'question-answer' },
       { key: 'Profil', title: 'Profil', icon: 'face' },
+      { key: 'Profil', title: 'Demo', icon: 'face' },
     ],
   };
 
@@ -30,7 +32,7 @@ export default class App extends React.Component {
     //name key : name componen/class
     
     Index: Index,
-    detailProfil: detailProfil,
+    PasangIklan: PasangIklan,
     Profil: Profil,
     Wishlist: Wishlist,
     

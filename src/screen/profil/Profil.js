@@ -24,8 +24,10 @@ render() {
             <Button style={styles.login} mode="contained" onPress={() => this.props.navigation.navigate('Login')}>
               <Text style={styles.title}> Login </Text> </Button>
               
-            <Button style={marginTop=20} mode="text" onPress={() => console.log('Pressed')}>
-              <Text style={styles.title2}>Belum Punya Akun Yuk Daftar Di sini</Text> </Button>
+             <View style={styles.button}> 
+            <Button style={styles.login} mode="contained" onPress={() => console.log('Pressed')}>
+              <Text style={styles.title}>Daftar</Text> </Button>
+            </View>
             </View>
             </View>
       </View>
